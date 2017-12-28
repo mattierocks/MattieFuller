@@ -18,7 +18,7 @@
        <nav class="navbar is-transparent" role="navigation" aria-lable="main navigation">
             <div class="navbar-brand">
                 <a class="nav-item" href="{{ route('home') }}">
-                    <img src="{{asset('images/mattie-fuller-io.png')}}" alt="Mattie Fuller Logo" width="224" height="56" class="main-logo m-t-15 m-l-40" />
+                    <img src="{{asset('images/mattie-fuller-io.png')}}" alt="Mattie Fuller Logo" width="224" height="56" class="main-logo m-t-15 m-l-50" />
                 </a>
             <div class="navbar-burger burger" data-target="navbarMain">
                 <span></span>
@@ -38,31 +38,36 @@
                 
                 
                 <div class="navbar-end">
-                    @if (Auth::guest())
+                    @if (!Auth::guest())
                         <a href="#" class="navbar-item is-tab">Login</a>
-                        <a href="#" class="navbar-item is-tab m-r-30">Register</a>
+                        <a href="#" class="navbar-item is-tab m-r-50">Register</a>
                     @else
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a href="#" class="navbar-link"></a>ass="navbar-item"></a>ass="navbar-item"></a>ass="navbar-item"></a>bar-link" href="#">
+                        <div class="navbar-item has-dropdown is-hoverable m-r-50">
+                            <a href="#" class="navbar-link">
                                 Hey Mattie!
                             </a>
-                        <div class="navbar-dropdown is-boxed">
-                            <a class="navbar-item" href="#">
-                                Profile
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Notifications
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Settings
-                            </a>
-                            <a class="navbar-item" href="#">
-                                Logout
-                            </a>     
-                        </div>
+                            <div class="navbar-dropdown is-boxed">
+                                <a class="navbar-item" href="#">
+                                    <span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span>
+                                    Profile
+                                </a>
+                                <a class="navbar-item" href="#">
+                                    <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
+                                    Notifications
+                                </a>
+                                <a class="navbar-item" href="#">
+                                    <span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
+                                    Settings
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item" href="#">
+                                    <span class="icon"><i class="fa fa-fw fa-sign-out m-r-5"></i></span>
+                                    Logout
+                                </a>     
+                            </div>
                     @endif
+                        </div>
                 </div>
-            
        </nav>
         @yield('content')
     </div>
