@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-       <nav class="navbar is-transparent" role="navigation" aria-lable="main navigation">
+       <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="nav-item" href="{{ route('home') }}">
                     <img src="{{asset('images/mattie-fuller-io.png')}}" alt="Mattie Fuller Logo" width="224" height="56" class="main-logo m-t-15 m-l-50" />

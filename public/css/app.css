@@ -3169,7 +3169,7 @@ th {
 }
 
 html {
-  background-color: white;
+  background-color: whitesmoke;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -17215,6 +17215,25 @@ label.panel-block:hover {
 .upload .upload-draggable.is-hovered.is-danger {
   border-color: #ff3860;
   background: rgba(255, 56, 96, 0.05);
+}
+
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 0 8px #777;
+          box-shadow: 0 0 8px #777;
+  -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+          box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+}
+
+a.navbar-item:hover {
+  color: #29abe2;
 }
 
 .m-t-5 {

@@ -1,0 +1,16 @@
+.is-muted {
+    color: $grey-light !important;
+}
+
+a.is-muted:hover {
+    color: $grey !important;
+}
+
+.navbar {
+    box-shadow: 0 0 8px #777;
+    box-shadow: 0 0 1px rgba(57, 70, 78, .15), 0 20px 55px -8px rgba(57, 70, 78, .25);
+}
+
+a.navbar-item:hover {
+    color: rgb(41, 171, 226);
+}
