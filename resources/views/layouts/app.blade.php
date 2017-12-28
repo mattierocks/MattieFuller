@@ -15,37 +15,54 @@
 </head>
 <body>
     <div id="app">
-       <nav class="nav has-shadow">
-            <div class="container">
-                <div class="nav-left">
-                    <a class="nav-item" href="{{ route('home') }}">
-                        <img src="{{asset('images/LOGO GOES HERE')}}" alt="Mattie Fuller Logo" />
-                    </a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile m-l-10">Portfolio</a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile">Blog</a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile">About</a>
-                    <a href="#" class="nav-item is-tab is-hidden-mobile">Contact</a>
-                </div>
-                
-                <div class="nav-right">
-                    @if (Auth::guest())
-                        <a href="#" class="nav-item is-tab">Login</a>
-                        <a href="#" class="nav-item is-tab">Register</a>
-                    @else
-                        <button class="dropdown nav-item is-tab">
-                            Hey Mattie <span class="icon"><i class="fa fa-caret-down"></i></span>
+       <nav class="navbar is-transparent" role="navigation" aria-lable="main navigation">
+            <div class="navbar-brand">
+                <a class="nav-item" href="{{ route('home') }}">
+                    <img src="{{asset('images/mattie-fuller-io.png')}}" alt="Mattie Fuller Logo" width="224" height="56" class="main-logo m-t-15 m-l-40" />
+                </a>
+            <div class="navbar-burger burger" data-target="navbarMain">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
 
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#"></a>Notification</li>
-                                <li><a href="#"></a>Settings</li>
-                                <li class="seperator"></li>
-                                <li><a href="#"></a>Logout</li>
-                            </ul>
-                        </button>
-                    @endif
+            <div id="navbarMain" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="#" class="navbar-item is-tab is-hidden-mobile m-l-10">Portfolio</a>
+                    <a href="#" class="navbar-item is-tab is-hidden-mobile">Blog</a>
+                    <a href="#" class="navbar-item is-tab is-hidden-mobile">About</a>
+                    <a href="#" class="navbar-item is-tab is-hidden-mobile">Contact</a>
                 </div>
             </div>
+                
+                
+                <div class="navbar-end">
+                    @if (Auth::guest())
+                        <a href="#" class="navbar-item is-tab">Login</a>
+                        <a href="#" class="navbar-item is-tab m-r-30">Register</a>
+                    @else
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="#" class="navbar-link"></a>ass="navbar-item"></a>ass="navbar-item"></a>ass="navbar-item"></a>bar-link" href="#">
+                                Hey Mattie!
+                            </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" href="#">
+                                Profile
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Notifications
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Settings
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Logout
+                            </a>     
+                        </div>
+                    @endif
+                </div>
+            
        </nav>
         @yield('content')
     </div>
