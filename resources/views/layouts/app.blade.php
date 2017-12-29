@@ -39,8 +39,8 @@
                 
                 <div class="navbar-end">
                     @if (!Auth::guest())
-                        <a href="#" class="navbar-item is-tab">Login</a>
-                        <a href="#" class="navbar-item is-tab m-r-50">Register</a>
+                        <a href="{{ route('login') }}" class="navbar-item is-tab">Login</a>
+                        <a href="{{ route('register') }}" class="navbar-item is-tab m-r-50">Register</a>
                     @else
                         <div class="navbar-item has-dropdown is-hoverable m-r-50">
                             <a href="#" class="navbar-link">
