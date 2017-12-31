@@ -21,13 +21,13 @@
             
             
             <div class="navbar-end">
-                @if (!Auth::guest())
+                @if (Auth::guest())
                     <a href="{{ route('login') }}" class="navbar-item is-tab">Login</a>
                     <a href="{{ route('register') }}" class="navbar-item is-tab m-r-50">Register</a>
                 @else
                     <div class="navbar-item has-dropdown is-hoverable m-r-50">
                         <a href="#" class="navbar-link">
-                            Hey Mattie!
+                            Hey {{ Auth::user()->name }}
                         </a>
                         <div class="navbar-dropdown is-boxed">
                             <a class="navbar-item" href="#">
@@ -38,9 +38,9 @@
                                 <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
                                 Notifications
                             </a>
-                            <a class="navbar-item" href="#">
+                            <a class="navbar-item" href="{{ route('manage.dashboard') }}">
                                 <span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
-                                Settings
+                                Manage
                             </a>
                             <hr class="navbar-divider">
                             <a class="navbar-item" href="{{route('logout')}}">
