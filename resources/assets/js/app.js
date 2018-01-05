@@ -20,9 +20,11 @@ Vue.use(Buefy);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app',
-    data: {
-        auto_password: true
-    }
-});
+// const app = new Vue({
+//     el: '#app',
+//     data: {
+//         auto_password: true
+//     }
+// });
+
+require('./manage');
