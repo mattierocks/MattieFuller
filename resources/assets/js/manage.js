@@ -26,7 +26,7 @@ for (var i = 0; i < accordions.length; i++) {
             // menu is open, we need to close it now
             setSubmenuStyles(submenu, null, null)
         } else {
-            // meny is close, so we need to open it
+            // menu is closed, so we need to open it
             setSubmenuStyles(submenu, submenu.scrollHeight + "px", "0.75em")
         }
     }

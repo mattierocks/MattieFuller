@@ -6,16 +6,24 @@
     width: 200px;
     background-color: white;
     overflow-y: scroll;
-    @media only screen and (min-width: 1024px) {
+    z-index: 100;
+    transition: left 0.3s ease-in-out;
+    &.is-active {
+        left: 0;
+        transition: left 0.3s ease-in-out;
+    }
+    @include desktop {
         left: 0;
     }
 }
 
 .management-area {
-    position: absolute;
     top: 4rem;
-    left: 200px;
     right: 0;
+    @include desktop {
+        position: absolute;
+        left: 200px;
+    }
 }
 
 .flex-container {
@@ -25,10 +33,22 @@
 .submenu {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
 }
 
 .menu-list li ul {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.navbar-burger {
+    border: none;
+}
+
+#admin-slideout-button {
+    transition: 0.3s;
+    &.is-active {
+        transition: 0.3s;
+        transform: rotateY(180deg);
+    }
 }
