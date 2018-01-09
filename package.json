@@ -18,7 +18,10 @@
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
-        "vue": "^2.5.7"
+        "slug": "^0.9.1",
+        "vue": "^2.5.13"
     },
-    "dependencies": {}
+    "dependencies": {
+        "vue-template-compiler": "^2.5.13"
+    }
 }
