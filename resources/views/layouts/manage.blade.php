@@ -25,6 +25,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{--  @yield('scripts')  --}}
+    @include('_includes.notifications.toast')
+    @yield('scripts')
 </body>
 </html>
